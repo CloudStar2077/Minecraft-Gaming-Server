@@ -1,2 +1,2 @@
 # Minecraft-Gaming-Server
-Setup and host your own Minecraft Gaming Server in a Docker Container
+Setup and host your own Java Minecraft Gaming Server in a Docker Container

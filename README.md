@@ -44,7 +44,13 @@ mcstatus <hostIP>:8888 status
 
 For this Setup a default Minecraft base image doesn't make sense, because we want to have full control over the environment. For the Base Image an Open-Source Java-Distribution 
 is used. The Minecraft Server Core is downloaded by the `entrypoint.sh` which also accepts the End User License Agreement and starts the server on port 8888 with no graphical user
-interface. Since this is for documentation purpose and the system hardware is limited the server start with min 1G and max 2G RAM.
+interface. Since this is for documentation purpose and the system hardware is limited the server runs with min 1G and max 2G RAM. For more memory You can adjust the RAM Variables 
+in the `.env`.
+```bash
+JAVA_MIN_RAM=1G
+JAVA_MAX_RAM=2G
+ ```   
+
 
 
 

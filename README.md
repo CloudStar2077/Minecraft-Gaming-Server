@@ -51,15 +51,11 @@ JAVA_MIN_RAM=4G
 JAVA_MAX_RAM=8G
  ```   
 
-
-
-
-
-
-
-
 Go to ```https://www.minecraft.net/de-de/download``` and copy the Minecraft Java Download URL into the .env
-The placeholder is `MC_URL=`
+```bash
+MC_URL=<Download_URL>
+ ```
+
 
 
 

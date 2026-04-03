@@ -47,8 +47,8 @@ is used. The Minecraft Server Core is downloaded by the `entrypoint.sh` which al
 interface. Since this is for documentation purpose and the system hardware is limited the server runs with min 1G and max 2G RAM. For more memory You can adjust the RAM Variables 
 in the `.env`.
 ```bash
-JAVA_MIN_RAM=1G
-JAVA_MAX_RAM=2G
+JAVA_MIN_RAM=4G
+JAVA_MAX_RAM=8G
  ```   
 
 

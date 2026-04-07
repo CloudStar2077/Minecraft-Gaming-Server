@@ -42,19 +42,38 @@ mcstatus <hostIP>:8888 status
 
 ## Usage
 
-For this Setup a default Minecraft base image doesn't make sense, because we want to have full control over the environment. For the Base Image an Open-Source Java-Distribution 
-is used. The Minecraft Server Core is downloaded by the `entrypoint.sh` which also accepts the End User License Agreement and starts the server on port 8888 with no graphical user
-interface. Since this is for documentation purpose and the system hardware is limited the server runs with min 1G and max 2G RAM. For more memory You can adjust the RAM Variables 
-in the `.env`.
+For this Setup a default Minecraft base image doesn't make sense, because we want to have more control over the environment. The `Dockerfile` pulls the Base Image an Open-Source Java-Distribution. The Minecraft Server Core is downloaded by the `entrypoint.sh` which also accepts the End User License Agreement and starts the server on port 8888 with no graphical user interface. Since this is for documentation purpose and the system hardware is limited the server runs with min 1G and max 2G RAM. For more memory You can adjust the RAM Variables in the `.env`.
 ```bash
 JAVA_MIN_RAM=4G
 JAVA_MAX_RAM=8G
  ```   
-
+Get the latest download version:
 Go to ```https://www.minecraft.net/de-de/download``` and copy the Minecraft Java Download URL into the .env
 ```bash
 MC_URL=<Download_URL>
  ```
+To prevent game data loss, a volume is created in the `docker-compose.yml` for persistent storage.
+
+As usually there is a `.gitignore` and `.dockerignore` to ignore all files which doesn't belong into the container image or the git repository.
+
+Run the server 
+```bash
+docker compose build # for building the image
+docker compose up -d # "-d" for detached mode, runs container in backgound
+ ```
+Download and start McStatus to check the server status 
+```bash
+python3 -m pip install mcstatus
+
+mcstatus <YourHostIP>:8888 status
+ ```
+
+ 
+
+
+
+
+
 
 
 

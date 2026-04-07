@@ -1,0 +1,23 @@
+# Minecraft Server Data
+minecraft-data/
+
+# Logs
+*.log
+
+# Environment 
+.env
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*

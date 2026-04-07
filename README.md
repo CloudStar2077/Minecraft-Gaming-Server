@@ -37,7 +37,7 @@ python3 -m pip install mcstatus
 Check Server Status:
 
 ```bash
-mcstatus <hostIP>:8888 status
+mcstatus <YourHostIP>:8888 status
 ```
 
 ## Usage

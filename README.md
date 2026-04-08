@@ -1,4 +1,5 @@
 # Minecraft-Gaming-Server
+
 Setup and host your own Java based Minecraft Gaming Server in a Docker Container 
 
 # Table of Contents
@@ -22,6 +23,7 @@ git clone git@github.com:CloudStar2077/Minecraft-Gaming-Server.git
 cd Minecraft-Gaming-Server
 mv example.env .env  # rename the example.env to .env
  ```
+Before using this in production keep in mind to 
 - Build docker image
 ```bash
 docker compose build
@@ -29,15 +31,6 @@ docker compose build
 - Run the Container
 ```bash
 docker compose up -d
-```
-- Install McStatus
-```bash
-python3 -m pip install mcstatus
- ```
-Check Server Status:
-
-```bash
-mcstatus <YourHostIP>:8888 status
 ```
 
 ## Usage
@@ -48,7 +41,7 @@ JAVA_MIN_RAM=4G
 JAVA_MAX_RAM=8G
  ```   
 Get the latest download version:
-Go to ```https://www.minecraft.net/de-de/download``` and copy the Minecraft Java Download URL into the .env
+Go to ```https://www.minecraft.net/de-de/download``` and copy the Minecraft Java Download URL into the `.env`
 ```bash
 MC_URL=<Download_URL>
  ```
@@ -56,25 +49,20 @@ To prevent game data loss, a volume is created in the `docker-compose.yml` for p
 
 As usually there is a `.gitignore` and `.dockerignore` to ignore all files which doesn't belong into the container image or the git repository.
 
-Run the server 
+You can build the image with the regular docker command or either use docker compose.
+If you want to use just docker for the image build go by
 ```bash
-docker compose build # for building the image
-docker compose up -d # "-d" for detached mode, runs container in backgound
+docker build -t minecraft-server /Minecraft-Gaming-Server  # -t for tag the image with a name
  ```
+otherwise
+```bash
+docker compose build # for building the image with compose
+docker compose up -d # -d for detached mode, runs container in backgound
+ ```
+
 Download and start McStatus to check the server status 
 ```bash
 python3 -m pip install mcstatus
 
 mcstatus <YourHostIP>:8888 status
  ```
-
- 
-
-
-
-
-
-
-
-
-

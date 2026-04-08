@@ -56,8 +56,21 @@ docker build -t minecraft-server /Minecraft-Gaming-Server  # -t for tag the imag
 otherwise
 ```bash
 docker compose build # for building the image with compose
-docker compose up -d # -d for detached mode, runs container in backgound
  ```
+Run the Container
+```bash
+docker run -d \              # WITHOUT COMPOSE 
+  --name mc-server \
+  --env-file .env \
+  -p 8888:8888 \
+  -v minecraft-data:/app \
+  --restart on-failure \
+  minecraft-server
+ ```
+or 
+```bash
+docker compose up -d # -d for detached mode, runs container in backgound with compose
+  ```   
 
 Download and start McStatus to check the server status 
 ```bash

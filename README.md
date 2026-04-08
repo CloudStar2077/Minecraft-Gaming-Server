@@ -49,8 +49,7 @@ To prevent game data loss, a volume is created in the `docker-compose.yml` for p
 
 As usually there is a `.gitignore` and `.dockerignore` to ignore all files which doesn't belong into the container image or the git repository.
 
-You can either build the image with the regular Docker command or use Docker Compose.
-If you want to use just docker for the image build go by
+You can either build the image with the regular Docker command or use Docker Compose. If you want to use just docker for the image then go by:
 ```bash
 docker build -t minecraft-server /Minecraft-Gaming-Server  # -t for tag the image with a name
  ```

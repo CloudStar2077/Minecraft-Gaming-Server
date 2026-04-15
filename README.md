@@ -24,7 +24,7 @@ cd Minecraft-Gaming-Server
 mv example.env .env  # rename the example.env to .env
  ```
 > [!IMPORTANT]  
-> Keep in Mind to never commit your .env
+> Keep in mind not to commit your .env file.
 
 - Build docker image
 ```bash

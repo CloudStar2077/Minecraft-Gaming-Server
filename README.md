@@ -23,6 +23,8 @@ git clone git@github.com:CloudStar2077/Minecraft-Gaming-Server.git
 cd Minecraft-Gaming-Server
 mv example.env .env  # rename the example.env to .env
  ```
+> [!IMPORTANT]  
+> Keep in Mind to never commit your .env
 
 - Build docker image
 ```bash
